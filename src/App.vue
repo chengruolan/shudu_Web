@@ -1,25 +1,27 @@
 <template>
   <div id="app">
     <Layout>
-      <Header class="header">Header</Header>
-      <Content class="content">Content</Content>
-      <Footer class="footer">Footer</Footer>
+      <Header class="header">
+        <my-header></my-header>
+      </Header>
+      <Content class="content"> center</Content>
     </Layout>
   </div>
 </template>
 <script>
-import { Layout } from 'ant-design-vue'
+import { Layout } from 'ant-design-vue';
+import myHeader from './components/MyHeader';
 export default {
   components: {
     Header: Layout.Header,
-    Footer: Layout.Footer,
     Content: Layout.Content,
     Layout,
+    myHeader,
   },
   data() {
-    return {}
+    return {};
   },
-}
+};
 </script>
 
 <style lang="less" scoped>
@@ -28,21 +30,15 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #fff;
   height: 100vh;
+  background-color: #f0f2f5;
   .header {
+    background: #fff;
     height: 80px;
     line-height: 80px;
   }
   .content {
-    color: #000;
-    height: 80vh;
-    line-height: 80vh;
-  }
-  .footer {
-    color: #000;
-    height: 10vh;
-    line-height: 10vh;
+    color: #333;
   }
 }
 </style>
