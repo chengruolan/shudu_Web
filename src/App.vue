@@ -1,30 +1,28 @@
 <template>
   <div id="app">
-    <Layout>
+    <a-layout>
       <Header class="header">
         <my-header></my-header>
       </Header>
-      <Content class="content"> center</Content>
-    </Layout>
+      <a-layout-content class="content">
+        <router-view></router-view>
+      </a-layout-content>
+    </a-layout>
   </div>
 </template>
 <script>
-import { Layout } from 'ant-design-vue';
 import myHeader from './components/MyHeader';
 export default {
   components: {
-    Header: Layout.Header,
-    Content: Layout.Content,
-    Layout,
-    myHeader,
+    myHeader
   },
   data() {
     return {};
-  },
+  }
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
